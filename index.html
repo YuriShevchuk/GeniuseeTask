@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geniusee Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/validator@13.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2.10.0/dist/parsley.min.js"></script>
+</head>
+<body>
+
+<div class="container mx-auto mt-5 mb-5">
+    <h2 class="mb-4">Checkout Form</h2>
+    <form id="checkoutForm">
+        <!-- Personal Information -->
+        <h3 class="mb-3 sticky-top bg-white">Personal Information</h3>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Yurii" required>
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Shevchuk" required>
+        </div>
+        <!-- / Personal Information -->
+        <!-- Contact Information -->
+        <h3 class="mb-3 sticky-top bg-white">Contact Information</h3>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+            <small id="emailHelp" class="form-text text-muted">This field is asynchronously validated.</small>
+        </div>
+        <div class="mb-3">
+            <label for="phoneNumber1" class="form-label">Phone Numbers</label>
+            <input type="tel" class="form-control mb-3" id="phoneNumber1" placeholder="123-456-7890" required>
+            <input type="tel" class="form-control mb-3" id="phoneNumber2" placeholder="123-456-7890">
+            <small class="text-muted mb-3">You can add up to 2 more phone numbers.</small>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select class="form-select" id="country" required>
+                <option value="ua">Ukraine</option>
+                <option value="us">United States</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" rows="3" required></textarea>
+        </div>
+        <!-- / Contact Information -->
+        <!-- Payment Details -->
+        <h3 class="mb-3 sticky-top bg-white">Payment Details</h3>
+        <div class="mb-3">
+            <label for="creditCard" class="form-label">Credit Card Number</label>
+            <input type="text" class="form-control" id="creditCard" placeholder="XXXX-XXXX-XXXX-XXXX" required minlength="3" maxlength="3">
+        </div>
+        <div class="mb-3">
+            <label for="cvv" class="form-label">CVV2 Code</label>
+            <input type="text" class="form-control" id="cvv" placeholder="XXX" required minlength="3" maxlength="3">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="agreement" required>
+            <label class="form-check-label" for="agreement">I agree to the terms of use</label>
+        </div>
+        <!-- / Payment Details -->
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+        <!-- / Submit Button -->
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
